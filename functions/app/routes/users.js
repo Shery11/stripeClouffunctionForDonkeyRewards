@@ -57,7 +57,7 @@ router.post('/register', function (req, res) {
 router.post('/getUserById',function(req,res){
     console.log(req.body);
 
-    User.findOne({_id: req.body.developerId}).populate('projects tasks projects[0].admin').exec(function(err,user){
+    User.findOne({_id: req.body.developerId}).populate('projects tasks').exec(function(err,user){
         if(err){
          res.json({success: false, message: err});
         }else{

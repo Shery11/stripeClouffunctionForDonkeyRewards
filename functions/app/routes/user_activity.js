@@ -13,6 +13,15 @@ router.post('/save',function(req,res){
    
     console.log(req.body);
 
+
+    UserActivity.save(function(err,doc){
+        if(err){
+           res.json({success:false,message:err});
+        }else{
+            res.json({success:true,data:doc});
+        }
+    })
+
   
 
 

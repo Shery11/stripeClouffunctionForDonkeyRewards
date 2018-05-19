@@ -51,7 +51,8 @@ var UserSchema = new Schema( {
     projects: [{ type : Schema.ObjectId, ref: 'Project' }], // with this the user will be connected to his assignments in the fastest way
     linked_acccounts :[{type : Schema.ObjectId, ref :'User'}],
     permission: {type: String, required:true, default: 'projectManager'},
-    tasks : [{type : Schema.ObjectId , ref: 'Task'}]
+    tasks : [{type : Schema.ObjectId , ref: 'Task'}],
+    user_activity: [{type: Schema.ObjectId, ref : 'UserActivity'}]
 });
 
 /*permission levels: admin moderator user.

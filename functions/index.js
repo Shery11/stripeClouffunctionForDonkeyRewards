@@ -64,7 +64,7 @@ require('./app/passport/passport')(app,passport);
 app.use('/users/', usersRoute);
 app.use('/project/',projectRoute);
 app.use('/task/',taskRoute);
-app.use('user_activity',UserActivityRoute);
+app.use('/userActivity/',UserActivityRoute);
 
 
 // start app ===============================================
